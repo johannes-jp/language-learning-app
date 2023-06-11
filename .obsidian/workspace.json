@@ -140,6 +140,8 @@
   },
   "active": "5ec7c436e91e1786",
   "lastOpenFiles": [
+    "docs/doc.md",
+    "README.md",
     "docs/gpt_sessions/gpt_plan_clarification.json",
     "docs/gpt_sessions",
     "gpt_sessions",
@@ -151,7 +153,6 @@
     "frontend/node_modules/typescript/lib/typescript.d.ts",
     "frontend/node_modules/typescript/lib/tsserverlibrary.d.ts",
     "frontend/node_modules/typescript/lib/lib.webworker.iterable.d.ts",
-    "frontend/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
     "frontend/node_modules/typescript/SECURITY.md",
     "frontend/node_modules/typescript/README.md",
     "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-512x512.png",
@@ -184,7 +185,6 @@
     "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+private.md",
     "frontend/node_modules/rollup/README.md",
     "frontend/node_modules/rollup/LICENSE.md",
-    "frontend/node_modules/eslint-plugin-svelte/README.md",
-    "frontend/node_modules/undici/docs/best-practices/writing-tests.md"
+    "frontend/node_modules/eslint-plugin-svelte/README.md"
   ]
 }
