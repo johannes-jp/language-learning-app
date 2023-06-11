@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "14ae79d4c94d232e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e908b73362fbb1dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eeba2c688d9dcc45",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5a7e511e89fa91e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac3afc76ea80c136",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ec7c436e91e1786",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc6c43221f016c3e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6e24b0357e89607e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e71e5d102c3f8b56",
+    "type": "split",
+    "children": [
+      {
+        "id": "de85cb1e49fdd274",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c6b66c130843c1d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a3402a7aee7f181e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9cf93893d9cb51dc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ad2c0b8ead690863",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5ec7c436e91e1786",
+  "lastOpenFiles": [
+    "docs/gpt_sessions/gpt_plan_clarification.json",
+    "docs/gpt_sessions",
+    "gpt_sessions",
+    "Untitled.md",
+    "frontend/vite.config.js.timestamp-1686469188209-07b15d746f86c.mjs",
+    "frontend/package-lock.json",
+    "frontend/node_modules/typescript/ThirdPartyNoticeText.txt",
+    "frontend/node_modules/typescript/LICENSE.txt",
+    "frontend/node_modules/typescript/lib/typescript.d.ts",
+    "frontend/node_modules/typescript/lib/tsserverlibrary.d.ts",
+    "frontend/node_modules/typescript/lib/lib.webworker.iterable.d.ts",
+    "frontend/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+    "frontend/node_modules/typescript/SECURITY.md",
+    "frontend/node_modules/typescript/README.md",
+    "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-512x512.png",
+    "frontend/node_modules/playwright-core/lib/webpack/recorder/icon-512x512.png",
+    "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-384x384.png",
+    "frontend/node_modules/playwright-core/lib/webpack/recorder/icon-384x384.png",
+    "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-32x32.png",
+    "frontend/node_modules/playwright-core/lib/webpack/recorder/icon-32x32.png",
+    "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-256x256.png",
+    "frontend/node_modules/playwright-core/lib/webpack/recorder/icon-256x256.png",
+    "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-192x192.png",
+    "frontend/node_modules/playwright-core/lib/webpack/recorder/icon-192x192.png",
+    "frontend/node_modules/playwright-core/README.md",
+    "frontend/node_modules/eslint/README.md",
+    "frontend/node_modules/svelte/README.md",
+    "frontend/node_modules/svelte/LICENSE.md",
+    "frontend/node_modules/@esbuild/linux-x64/README.md",
+    "frontend/node_modules/svelte/CHANGELOG.md",
+    "frontend/node_modules/svelte-check/README.md",
+    "frontend/node_modules/prettier/README.md",
+    "frontend/node_modules/@playwright/test/README.md",
+    "frontend/node_modules/vite/README.md",
+    "frontend/node_modules/undici/README.md",
+    "frontend/node_modules/@sveltejs/kit/README.md",
+    "frontend/node_modules/vite/LICENSE.md",
+    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$lib.md",
+    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+public.md",
+    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+private.md",
+    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+public.md",
+    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+private.md",
+    "frontend/node_modules/rollup/README.md",
+    "frontend/node_modules/rollup/LICENSE.md",
+    "frontend/node_modules/eslint-plugin-svelte/README.md",
+    "frontend/node_modules/undici/docs/best-practices/writing-tests.md"
+  ]
+}
