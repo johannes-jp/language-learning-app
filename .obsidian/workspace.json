@@ -11,8 +11,12 @@
             "id": "eeba2c688d9dcc45",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "backend/app/models/models.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "backend/app/models/models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "backend/app/models/models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "backend/app/models/models.md"
+              }
             }
           }
         ]
@@ -138,21 +146,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5ec7c436e91e1786",
+  "active": "eeba2c688d9dcc45",
   "lastOpenFiles": [
+    "docs/features.md",
+    "backend/app/models/models.md",
+    "backend/app/models/004_",
+    "backend/app/models/010",
+    "backend/app/models/009",
+    "backend/app/models/008",
+    "backend/app/models/007",
+    "backend/app/models/006",
+    "backend/app/models/005",
+    "backend/app/models/004",
+    "backend/app/models/003_create_sentences.sql",
+    "backend/app/models/main.sql",
+    "docs/README.md",
+    "docs/gpt/GPTREADME.md",
+    "docs/GPTREADME.md",
+    "GPTREADME.md",
+    "docs/tree.md",
     "docs/doc.md",
-    "README.md",
-    "docs/gpt_sessions/gpt_plan_clarification.json",
-    "docs/gpt_sessions",
-    "gpt_sessions",
     "Untitled.md",
-    "frontend/vite.config.js.timestamp-1686469188209-07b15d746f86c.mjs",
-    "frontend/package-lock.json",
-    "frontend/node_modules/typescript/ThirdPartyNoticeText.txt",
-    "frontend/node_modules/typescript/LICENSE.txt",
-    "frontend/node_modules/typescript/lib/typescript.d.ts",
-    "frontend/node_modules/typescript/lib/tsserverlibrary.d.ts",
-    "frontend/node_modules/typescript/lib/lib.webworker.iterable.d.ts",
+    "README.md",
     "frontend/node_modules/typescript/SECURITY.md",
     "frontend/node_modules/typescript/README.md",
     "frontend/node_modules/playwright-core/lib/webpack/traceViewer/icon-512x512.png",
@@ -177,14 +192,6 @@
     "frontend/node_modules/vite/README.md",
     "frontend/node_modules/undici/README.md",
     "frontend/node_modules/@sveltejs/kit/README.md",
-    "frontend/node_modules/vite/LICENSE.md",
-    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$lib.md",
-    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+public.md",
-    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+private.md",
-    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+public.md",
-    "frontend/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+private.md",
-    "frontend/node_modules/rollup/README.md",
-    "frontend/node_modules/rollup/LICENSE.md",
-    "frontend/node_modules/eslint-plugin-svelte/README.md"
+    "frontend/node_modules/vite/LICENSE.md"
   ]
 }
