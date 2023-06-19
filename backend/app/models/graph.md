@@ -1,0 +1,88 @@
+- guidance
+	- properties with diverse relationships should be nodes
+	- filtering by property is easier than traversing relationships
+	- relationships should have substantial meaning
+- 
+- **Nodes** - Subitems are properties
+	- Language
+		- id
+		- language_tag - BCP tag
+		- number of speakers
+		- expected relationships
+			- title (language name in various languages)
+	- Content Authority
+		- id
+		- organization name - wiktionary, oxford, etc.
+		- domain/homepage
+	- User Role
+		- id
+		- role - admin, teacher, student, etc.
+		- description
+	- Content Status
+		- id
+		- status - official, admin-approved, pending-approval, favorite, flagged
+		- description
+	- Content type
+		- id
+		- type - word, sign, phrase, list, lesson, etc.
+	- Relationship Type
+		- id
+		- type - translation, definition synonym homonym usage category, image/video/audio description
+		- description
+	- Content
+		- id
+		- type - 
+		- list item
+		- title
+		- study event
+		- status
+		- is_private
+		- language_tag
+		- origin
+		- popularity
+		- vector
+	- Word
+		- id
+		- word
+		- creator
+		- validator
+		- context
+	- Sign
+	- Phrase
+	- List
+	- User (combining User Credentials, User Profiles, and User Preferences)
+	- Event
+	
+- **Relationships**
+	- CONTAINS - a {list} contains b {word}
+	- STUDIED - a {user} studied b {phrase}
+		- 
+		- relationship_id
+	- TRANSLATES_TO
+	- DEFINES
+	- Content relationships
+	- 
+		- translation
+		- definition
+		- synonym
+		- homonym
+		- usage
+		- category
+		- image description
+		- video description
+		- audio description
+		- upvoted
+		- downvoted
+		- list item
+		- title
+		- study event
+			- user id
+			- study date
+			- next due date
+			- answer given
+			- result
+				- fail
+				- hard
+				- ok
+				- good
+	- List items (Could be represented as a HAS_ITEM relationship from a List node to a Content node)

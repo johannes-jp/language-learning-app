@@ -1,3 +1,6 @@
+- sources of truth
+	- information sources with approved status 
+
 - flashcards both ways
 	- seeing sentences that contain the word
 		- option: also show sentences containing root(s) of the word
@@ -32,3 +35,5 @@
 	- divide each word's relevance by their SR interval and add
 - user generated content from lists is flagged as such, but with a verified source of truth or enough upvotes, it can be added to master content lists
 - linguistics.stackexchange integration?
+- learning lists are singles, not pairs, so they can be adapted to any language
+- user contributions list all content & content relationships where they are the originator
