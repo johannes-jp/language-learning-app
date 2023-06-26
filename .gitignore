@@ -1,3 +1,5 @@
-/docs/gpt/
+/docs/
 .obsidian/
 /backend/.env
+/backend/env
+/archive/

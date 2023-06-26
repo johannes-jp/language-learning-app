@@ -35,5 +35,7 @@
 	- divide each word's relevance by their SR interval and add
 - user generated content from lists is flagged as such, but with a verified source of truth or enough upvotes, it can be added to master content lists
 - linguistics.stackexchange integration?
-- learning lists are singles, not pairs, so they can be adapted to any language
+- learning lists
+  - singlets - automatically adapt to any language
+  - groups of 2+ - user explicitly configures relationships 
 - user contributions list all content & content relationships where they are the originator

@@ -1,22 +1,36 @@
-- a user wants to learn a language on my language app
-- they make an account and want to get started studying
-- to study, they find out what they need to know, usually in the form of lists, maybe a list of grammar concepts, a list of vocabulary, or a list of sentences to jump right into learning with context.
-	- if they found that list elsewhere, they make their own list on the app, and give each list item a priority
-	- if they browse and filter for public lists on my app, they might find an existing list they like. that list might be an 'official' list, or it might be highly upvoted by the community.
-	- the user saves the list for their personal use and gets started
-- the study item that comes up can be a word, or a phrase, or a sentence, or a street sign, or a sign language gesture, or something else.
-- the study item is designed to be a component of language or meaning with as little baggage as possible, so it can freely create relationships with other components in whatever way gives it the richest meaning.
-	- for example, a word does not 'own' a sentence that acts as its definition - it has a relationship with a sentence that gives the word meaning. in some cases it is easier to make a relationship inseparable though, like a part of speech, because it is less complex to have 1 entry each for the verb and noun form of a word than it is to manage the triple relationship of a word's part of speech changing when it's associated with one sentence or another.
-- the study item is designed like this so that when the user wants to see the 'response' to the 'prompt' of "what is the meaning of this thing the app has shown you", the flexibility to assemble their own components together to gain the best understanding of that thing's relationships will help with its retention, and allows users knowledgeable about their language to curate meaningful experiences for others by establishing the format and selecting the content to make up the response.
-- the user's ability over time to correctly guess the relationship between 2 things is tracked with the common practice of spaced repetition. saving records for them of the details of each review instance, prompting self-reporting of the quality of their knowledge recall with the result options 'fail','hard','ok', and 'easy', and determining an interval for when to suggest another review based on that result, are important functions.  
-- tracking the user's knowledge of the relationship/bridge between the study item and its intended answer can look a few different ways. in all cases, any input or choice made by the user can be saved for later, which is a good way to identify and correct repeated mistakes
-	- flashcards - the user provides no knowledge input before seeing an answer
-	- fill in the blank - the user must generate a knowledge input from scratch and submit it before seeing the answer
-	- multiple choice - the user is presented with multiple options and chooses one or more correct answers.
-	- freeform - the user input is less structured and is assessed qualitatively.
-- relationships and their types will have a great amount of depth and need a lot of flexibility with how they're queried, which is why a graph database like neo4j will comprise the content and relationship storage.
-	- some relationship types include: translation, definition, synonym, homonym, usage, category, sign_description, title, etc.
-	- with types like 'title', lists and other meta-content will have descriptive relationships that are structured so they can easily extend to serve the same purpose in other languages
-	- content and relationships will have a 'popularity' metric that tracks how often that content is studied. relationships will also have 'relevance' and 'karma' metrics so there are ways for machine translations to notate their confidence levels, and users have ways to curate relationships based on community-assessed quality.
-	- relationships
-- near-term, LLMs will be integrated to allow a conversation feature that can either be self-guided, or can assess the user's progress in a language and decide how to direct their study. graph database integration will be key to this, as will storing vector embeddings to reduce api calls
+- Frontend
+	- user interaction
+		- html/css
+		- js framework
+			- svelte
+	- send request
+		- ```js fetch```
+		- axios
+	- receive response
+- Backend 
+	- receive request (url mapping, routing to functions)
+		- flask
+		- django
+	- authentication
+		- 
+	- process request
+		- python
+		- postgres
+			- psycopg2
+		- neo4j
+			- py2neo
+	- logging & error handling
+	- send response
+- Support
+	- testing
+		- python
+			- pytest
+		- api
+			- postman
+	- deployment
+		- containers
+			- docker
+		- orchestration
+			- kubernetes
+	- CI/CD
+		- github actions

@@ -1,0 +1,555 @@
+{
+    "Ln": {
+        "grammar": "noun",
+        "description": "A word that denotes a person, place, thing, or idea.",
+        "examples": [
+            "kissa",
+            "auto",
+            "kirja",
+            "koti"
+        ]
+    },
+    "Lee": {
+        "grammar": "proper noun - first name",
+        "description": "A name used to identify a particular person.",
+        "examples": [
+            "Liisa",
+            "Jukka",
+            "Matti",
+            "Eeva"
+        ]
+    },
+    "Les": {
+        "grammar": "proper noun - last name",
+        "description": "A surname or family name.",
+        "examples": [
+            "Korhonen",
+            "Virtanen",
+            "Mäkinen"
+        ]
+    },
+    "Lep": {
+        "grammar": "proper noun - place name",
+        "description": "A name given to a specific geographical location.",
+        "examples": [
+            "Helsinki",
+            "Turku",
+            "Tampere"
+        ]
+    },
+    "Lem": {
+        "grammar": "proper noun - other proper noun",
+        "description": "A name given to a specific non-person, non-place entity.",
+        "examples": [
+            "Nokia",
+            "Kalevala"
+        ]
+    },
+    "Ll": {
+        "grammar": "adjective",
+        "description": "A word that describes a noun or pronoun.",
+        "examples": [
+            "iso",
+            "pieni",
+            "kaunis",
+            "vanha"
+        ]
+    },
+    "Lnl": {
+        "grammar": "nominal adjective",
+        "description": "An adjective that is used as a noun.",
+        "examples": [
+            "vanha (as in 'vanha sanoo')",
+            "nuori (as in 'nuori ajattelee')"
+        ]
+    },
+    "Lt": {
+        "grammar": "verb",
+        "description": "A word that denotes an action or a state of being.",
+        "examples": [
+            "juosta",
+            "nukkua",
+            "ajatella",
+            "syödä"
+        ]
+    },
+    "Lh": {
+        "grammar": "interjection",
+        "description": "A word used to express sudden outburst of emotion or feeling.",
+        "examples": [
+            "hei",
+            "oho",
+            "voi",
+            "jaha"
+        ]
+    },
+    "Lp": {
+        "grammar": "prefix",
+        "description": "A morpheme added at the beginning of a word to modify its meaning.",
+        "examples": [
+            "epä-",
+            "ali-",
+            "väli-",
+            "yli-"
+        ]
+    },
+    "La": {
+        "grammar": "abbreviation",
+        "description": "A shortened form of a word or phrase.",
+        "examples": [
+            "tk.",
+            "yht.",
+            "jne.",
+            "os."
+        ]
+    },
+    "Ls": {
+        "grammar": "adverb",
+        "description": "A word that modifies a verb, adjective, or another adverb, expressing manner, place, time, or degree.",
+        "examples": [
+            "nopeasti",
+            "harvoin",
+            "kaukana",
+            "täysin"
+        ]
+    },
+    "Lc": {
+        "grammar": "conjunction",
+        "description": "A word used to connect clauses or sentences or to coordinate words in the same clause.",
+        "examples": [
+            "ja",
+            "mutta",
+            "koska",
+            "tai"
+        ]
+    },
+    "Lu": {
+        "grammar": "numeral",
+        "description": "A word that quantifies an amount or order.",
+        "examples": [
+            "yksi",
+            "kaksi",
+            "kolme",
+            "neljä"
+        ]
+    },
+    "Lur": {
+        "grammar": "numeral (roman)",
+        "description": "A Roman numeral used to denote a number.",
+        "examples": [
+            "I",
+            "V",
+            "X",
+            "L"
+        ]
+    },
+    "Lr": {
+        "grammar": "postposition",
+        "description": "A type of preposition that is placed after the noun, pronoun, or clause that it governs.",
+        "examples": [
+            "takana",
+            "edessä",
+            "alla",
+            "yläpuolella"
+        ]
+    },
+    "Ld": {
+        "grammar": "preposition",
+        "description": "A word placed before a noun or pronoun to modify another word in the sentence.",
+        "examples": [
+            "ennen",
+            "jälkeen",
+            "vastaan",
+            "ilman"
+        ]
+    },
+    "Lk": {
+        "grammar": "negation",
+        "description": "A word or phrase to make the sentence negative.",
+        "examples": [
+            "ei",
+            "älä",
+            "ei ole",
+            "älköön"
+        ]
+    },
+    "Va": {
+        "grammar": "Vowel harmony",
+        "description": "A phonological process that restricts which vowels may be found near each other in a word in Finnish. Va represents words that use the vowels a, o, and u.",
+        "examples": [
+            "auto",
+            "oma",
+            "kuka"
+        ]
+    },
+    "Vä": {
+        "grammar": "Vowel harmony",
+        "description": "Another aspect of vowel harmony in Finnish. Vä represents words that use the vowels ä, ö, and y.",
+        "examples": [
+            "järvi",
+            "hylly",
+            "pöytä"
+        ]
+    },
+    "Vaä": {
+        "grammar": "Vowel harmony",
+        "description": "A representation of words that use a mix of vowels from both Va and Vä classes, especially in compound words or loanwords.",
+        "examples": [
+            "lämpötila",
+            "hälytyskello"
+        ]
+    },
+    "Xp": {
+        "grammar": "base form",
+        "description": "The basic form of a word from which other forms are derived.",
+        "examples": [
+            "olla",
+            "juosta",
+            "nukkua",
+            "lukeminen"
+        ]
+    },
+    "Xj": {
+        "grammar": "stem base form",
+        "description": "The root of a word, devoid of any affixes, inflections or derivations.",
+        "examples": [
+            "kävele-",
+            "juokse-",
+            "nukku-",
+            "lue-"
+        ]
+    },
+    "Xr": {
+        "grammar": "structure",
+        "description": "A representation of the structural formation of a word.",
+        "examples": []
+    },
+    "Xs": {
+        "grammar": "sourceid",
+        "description": "Used for technical tracking of word origin or source. Not applicable for typical language use.",
+        "examples": []
+    },
+    "X": {
+        "grammar": "end character of parameter",
+        "description": "A concept used in technical contexts to denote the end character of a parameter. Not typically applicable in language examples.",
+        "examples": []
+    },
+    "Sn": {
+        "grammar": "nominative",
+        "description": "The base form of the noun. It's typically used for the subject of the sentence.",
+        "examples": [
+            "kissa",
+            "koira",
+            "kirja",
+            "auto"
+        ]
+    },
+    "Sg": {
+        "grammar": "genitive",
+        "description": "The case used to show possession or to form the object of certain verbs or prepositions.",
+        "examples": [
+            "kissan",
+            "koiran",
+            "kirjan",
+            "auton"
+        ]
+    },
+    "Sp": {
+        "grammar": "partitive",
+        "description": "The case used to express partiality, quantity or an ongoing action.",
+        "examples": [
+            "kissaa",
+            "koiraa",
+            "kirjaa",
+            "autoa"
+        ]
+    },
+    "Ses": {
+        "grammar": "essive",
+        "description": "The case used to express a temporary state of being.",
+        "examples": [
+            "kissana",
+            "koirana",
+            "kirjana",
+            "autona"
+        ]
+    },
+    "Str": {
+        "grammar": "translative",
+        "description": "The case used to express a change in state or transformation.",
+        "examples": [
+            "kissaksi",
+            "koiraksi",
+            "kirjaksi",
+            "autoksi"
+        ]
+    },
+    "Sine": {
+        "grammar": "inessive",
+        "description": "The case used to express being inside or within something.",
+        "examples": [
+            "kissassa",
+            "koirassa",
+            "kirjassa",
+            "autossa"
+        ]
+    },
+    "Sela": {
+        "grammar": "elative",
+        "description": "The case used to express movement out of something.",
+        "examples": [
+            "kissasta",
+            "koirasta",
+            "kirjasta",
+            "autosta"
+        ]
+    },
+    "Sill": {
+        "grammar": "illative",
+        "description": "The case used to express movement into something.",
+        "examples": [
+            "kissaan",
+            "koiraan",
+            "kirjaan",
+            "autoon"
+        ]
+    },
+    "Sade": {
+        "grammar": "adessive",
+        "description": "The case used to express location or possession.",
+        "examples": [
+            "kissalla",
+            "koiralla",
+            "kirjalla",
+            "autolla"
+        ]
+    },
+    "Sabl": {
+        "grammar": "ablative",
+        "description": "The case used to express movement away from something.",
+        "examples": [
+            "kissalta",
+            "koiralta",
+            "kirjalta",
+            "autolta"
+        ]
+    },
+    "Sall": {
+        "grammar": "allative",
+        "description": "The case used to express movement towards something or to denote the location where an action takes place.",
+        "examples": [
+            "kissalle",
+            "koiralle",
+            "kirjalle",
+            "autolle"
+        ]
+    },
+    "Sab": {
+        "grammar": "abessive",
+        "description": "The case used to express the absence or lack of something.",
+        "examples": [
+            "kissatta",
+            "koiratta",
+            "kirjatta",
+            "autotta"
+        ]
+    },
+    "Sko": {
+        "grammar": "comitative",
+        "description": "The case used to express the notion of 'with' or 'together with'. It is always used with the possessive suffix.",
+        "examples": [
+            "kissan kanssa",
+            "koiran kanssa",
+            "kirjan kanssa",
+            "auton kanssa"
+        ]
+    },
+    "Sin": {
+        "grammar": "instructive",
+        "description": "The case used to express 'by means of' or 'with'. This case is rarely used and has no singular forms in modern Finnish.",
+        "examples": [
+            "käsinkirjoitetut",
+            "jalan"
+        ]
+    },
+    "Ssti": {
+        "grammar": "narrative_sti",
+        "description": "A rare and poetic case used in storytelling. It doesn't have standard forms and appears mainly in ancient poetry and folklore.",
+        "examples": []
+    },
+    "Sak": {
+        "grammar": "accusative",
+        "description": "The case used for the total object of a verb. It often looks like the nominative or genitive in singular form.",
+        "examples": [
+            "kissan",
+            "koiran",
+            "kirjan",
+            "auton"
+        ]
+    },
+    "Ny": {
+        "grammar": "singular",
+        "description": "Indicates that the noun is singular, i.e., it refers to one entity.",
+        "examples": [
+            "kissa",
+            "koira",
+            "kirja",
+            "auto"
+        ]
+    },
+    "Nm": {
+        "grammar": "plural",
+        "description": "Indicates that the noun is plural, i.e., it refers to more than one entity.",
+        "examples": [
+            "kissat",
+            "koirat",
+            "kirjat",
+            "autot"
+        ]
+    },
+    "O1y": {
+        "grammar": "singular 1st person",
+        "description": "Indicates possession by the speaker. It's a possessive suffix added to a noun.",
+        "examples": [
+            "kissani",
+            "koirani",
+            "kirjani",
+            "autoni"
+        ]
+    },
+    "O2y": {
+        "grammar": "singular 2nd person",
+        "description": "Indicates possession by the person being spoken to. It's a possessive suffix added to a noun.",
+        "examples": [
+            "kissasi",
+            "koirasi",
+            "kirjasi",
+            "autosi"
+        ]
+    },
+    "O1m": {
+        "grammar": "plural 1st person",
+        "description": "Indicates possession by the speaker and others. It's a possessive suffix added to a noun.",
+        "examples": [
+            "kissamme",
+            "koiramme",
+            "kirjamme",
+            "automme"
+        ]
+    },
+    "O2m": {
+        "grammar": "plural 2nd person",
+        "description": "Indicates possession by the persons being spoken to. It's a possessive suffix added to a noun.",
+        "examples": [
+            "kissanne",
+            "koiranne",
+            "kirjanne",
+            "autonne"
+        ]
+    },
+    "O3": {
+        "grammar": "singular/plural 3rd person",
+        "description": "Indicates possession by someone else, not the speaker or the person being spoken to. It's a possessive suffix added to a noun.",
+        "examples": [
+            "kissansa",
+            "koiransa",
+            "kirjansa",
+            "autonsa"
+        ]
+    },
+    "Cc": {
+        "grammar": "comparative",
+        "description": "Forms used to compare differences between the two objects they modify (larger, smaller, faster, higher).",
+        "examples": [
+            "suurempi",
+            "pienempi",
+            "nopeampi",
+            "korkeampi"
+        ]
+    },
+    "Cs": {
+        "grammar": "superlative",
+        "description": "Forms used to denote the most extreme degree of something.",
+        "examples": [
+            "suurin",
+            "pienin",
+            "nopein",
+            "korkein"
+        ]
+    },
+    "Fkin": {
+        "grammar": "-kin",
+        "description": "An enclitic that is equivalent to 'also' or 'even' in English.",
+        "examples": [
+            "minäkin",
+            "sinäkin",
+            "koirakin",
+            "kissakin"
+        ]
+    },
+    "Fkaan": {
+        "grammar": "-kaan",
+        "description": "An enclitic that is equivalent to 'either' or 'neither' in English when used in negative sentences.",
+        "examples": [
+            "minäkään",
+            "sinäkään",
+            "koirakaan",
+            "kissakaan"
+        ]
+    },
+    "Fko": {
+        "grammar": "question particle ko/kö",
+        "description": "A particle used to form yes/no questions.",
+        "examples": [
+            "Onko?",
+            "Tuleeko?",
+            "Menetkö?",
+            "Juoksemmeko?"
+        ]
+    },
+    "Tn1": {
+        "grammar": "1st infinitive",
+        "description": "The base form of the verb, usually ending in '-a' or '-ä'.",
+        "examples": [
+            "juosta",
+            "lukema",
+            "nukkua",
+            "kirjoittaa"
+        ]
+    },
+    "Tn2": {
+        "grammar": "2nd infinitive",
+        "description": "Expresses the manner of an action, usually with the suffix '-en'.",
+        "examples": [
+            "juostessa",
+            "lukeessa",
+            "nukkuessa",
+            "kirjoittaessa"
+        ]
+    },
+    "Tn3": {
+        "grammar": "3rd infinitive",
+        "description": "Indicates a state or condition resulting from the action of the verb, usually with the suffix '-ma' or '-mä'.",
+        "examples": [
+            "juoma",
+            "lukema",
+            "nukkuma",
+            "kirjoittama"
+        ]
+    },
+    "Tn4": {
+        "grammar": "4th infinitive",
+        "description": "Indicates a necessity or obligation to perform an action, usually with the suffix '-minen'.",
+        "examples": [
+            "juokseminen",
+            "lukeminen",
+            "nukkuminen",
+            "kirjoittaminen"
+        ]
+    },
+    "Tn5": {
+        "grammar": "5th infinitive",
+        "description": "A rarely used form which denotes the object of an action, typically ends with '-maisilla'.",
+        "examples": []
+    }
+}
