@@ -1,8 +1,0 @@
-# fastapi==0.65.2
-# uvicorn==0.14.0
-# sqlalchemy==1.4.15
-# alembic==1.6.5
-# pydantic==1.8.2
-# psycopg2-binary==2.8.6
-# graphene==3.0
-# libvoikko==4.3

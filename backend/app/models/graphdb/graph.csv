@@ -1,7 +1,0 @@
-id:ID,name,metadata,:LABEL,:START_ID,:END_ID,:TYPE
-w1,run,{'language': 'en'},word,,,
-w2,manage,{'language': 'en'},word,,,
-p1,I run the store,{},phrase,,,
-p2,I run to the store,{},phrase,,,
-,,,,w1,p1,is_in
-,,,,w1,p2,is_in

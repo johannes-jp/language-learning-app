@@ -1,5 +1,4 @@
-/docs/
-.obsidian/
-/backend/.env
-/backend/env
-/archive/
+.*
+backend_old/
+docs/
+archive/
