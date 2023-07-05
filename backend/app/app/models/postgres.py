@@ -1,23 +1,24 @@
-from sqlalchemy import Column, Integer, Boolean, Enum, ForeignKey, String, JSON
-from sqlalchemy.orm import relationship
-from sqlalchemy.dialects.postgresql import BIGINT, UUID, JSONB
-
-from .base import Base
-from sqlalchemy.ext.declarative import declarative_base
-Base = declarative_base()
-
-from typing import TYPE_CHECKING
-
-from app.db.base_class import Base
+from typing import TYPE_CHECKING, List, Dict
+from sqlalchemy import Column, Integer, BigInteger, String, Text,Boolean, Enum, ForeignKey, JSON, Interval, Uuid
+# Date, DateTime, Interval
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relatonship
 
 if TYPE_CHECKING:
     from .item import Item  # noqa: F401
 
 
+class Base(DeclarativeBase):
+    pass
+
 # Reference Tables
 
-class Languages(Base):
-    __tablename__ = "languages"
+class Language(Base): #TODO association table for languages & grammar sets 
+    __tablename__ = "language"
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True, nullable=False)
+    language_tag: Mapped[str] = mapped_column(unique=True, nullable=False)
+    names: Mapped[Dict]
+    population: Mapped[int]
+    grammar_elements: Mapped[List["GrammarElement"]] = relationship(back_populates="languages")
     '''
     - **Languages** - List of all accepted languages.
         - `id`: `SERIAL PRIMARY KEY`
@@ -26,37 +27,34 @@ class Languages(Base):
         - `num_speakers`: `INT` - The estimated number of native speakers of the language.
         - `grammar`: `ARRAY REFERENCE grammar_elements(id)` - List of grammar ids that the language uses.
     '''
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    language_tag = Column(String(50), nullable=False, unique=True)
-    names = Column(JSONB)
-    num_speakers = Column(Integer)
-    grammar: ARRAY REFERENCE grammar_elements(id)
 
-class GrammarElements(Base):
+class GrammarElement(Base): #incomplete
     '''
     - **Grammar Elements**
         - id: serial primary key
         - name: All types, tenses, moods, etc. 
         - `fst`: - Dict of finite state transducer codes with their language id
     '''
-    __tablename__ = "grammar_elements"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String(50), nullable=False, unique=True)
-    fst = finite state transducer codes in various languages
+    __tablename__ = "grammar_element"
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True, nullable=False)
+    name: Mapped[str] = mapped_column(unique=True, nullable=False)
+    languages: Mapped[List["Language"]] = relationship(back_populates="grammar_elements")
+    fst: Mapped[Dict["Language":str]] # finite state transducer codes
 
     # reverse relationship
     languages = relationship("Languages", secondary=grammar_association_table)
+    pass
 
-class RelationshipTypes(Base):
+class RelationshipType(Base): #incomplete
     """
     - **Relationship Types** - Catalog of the large variety of contextual relationships that can exist. Keep in mind relational syntax for wikiData, etc.
         - `id`: `SERIAL PRIMARY KEY`
         - `type`: `TEXT` - Translation, definition, synonym, example, lexical_root, part_of_speech, category, homonym, synonym, hyponym, hypernym,  sign_description, list_name, media_representation, numerical_representation, link, cultural_context, etc.
         - `description`: `TEXT`
     """
+    pass
 
-class ContentAuthorities(Base):
+class ContentAuthority(Base):
     '''
     - **Content Authorities** - Information sources with elevated content management privileges. 
         - `id`: `SERIAL PRIMARY KEY`
@@ -71,7 +69,7 @@ class ContentAuthorities(Base):
     user_id = 
     authority_link = Column(String)
 
-class WikidataEntities(Base):
+class WikidataEntity(Base):
     __tablename__ = ""
     '''
     - entities
@@ -94,23 +92,48 @@ class WikidataEntities(Base):
     '''
 
 # Contentful Tables
+class ContentStatus(Enum):
+    official = "official"
+    admin_approved = "admin_approved"
+    pending_approval = "pending_approval"
+    flagged_for_review = "flagged_for_review"
+    # unmoderated = "unmoderated"
+    # favorited = "favorited"
+class ContentType(Enum):
+    word = 'word'
+    affix = 'affix'
+    fragment = 'fragment'
+    sign = 'sign'
+    phrase = 'phrase'
+    list = 'list'
+    syllable = 'syllable'
 
 class Content(Base):
+    __tablename__ = 'content'
+    id: Mapped[BigInteger] = mapped_column(primary_key=True, autoincrement=True, nullable=False)
+    type: Mapped[ContentType]
+    status: Mapped[ContentStatus]
+    is_private: Mapped[bool]
+    originator: Mapped[User.id]
+    popularity = Column(Integer)
+    karma = Column(Integer)
+    user_profile = relationship('UserProfile')
     """
     - **Content** - Mgmt metadata for all content types. Consider splitting into lexographical and meta-content tables.
         - `id`: `BIGSERIAL PRIMARY KEY` - Unique identifier for each content item.
-        - `type`: `INT REFERENCE content_types(id)`
-        - `status`: `ENUM('official','admin_approved','unmoderated','pending_approval','community_favorite','flagged_for_review')` - For assigning content privileges. If too many categories, may be split into its own table:
-            -  **Content Statuses** - For assigning privileges to various forms of content.
-                - `id`: `SERIAL PRIMARY KEY`
-                - `status`: `TEXT NOT NULL UNIQUE` - Official, admin-approved, unmoderated, pending-approval, community-favorite, flagged-for-review, sponsored, etc.
-                - `description`: `TEXT`
         - `type`: `ENUM('word','affix','fragment','sign','phrase','list','syllable')` - If too many categories, may be split into its own table:
+            - `type`: `INT REFERENCE content_types(id)`
             - **Content Types**
                 - `id`: `SERIAL PRIMARY KEY`
                 - `type`: `TEXT NOT NULL UNIQUE` - Word, affix, sign, phrase, syllable, list, video, image, audio, lexeme, morpheme, etc.
                 - `format`: `ENUM('text','image','video','audio')`
                 - `description`: `TEXT`
+        - `status`: `ENUM('official','admin_approved','unmoderated','pending_approval','community_favorite','flagged_for_review')` - For assigning content privileges. If too many categories, may be split into its own table:
+            -  **Content Statuses** - For assigning privileges to various forms of content.
+                - `id`: `SERIAL PRIMARY KEY`
+                - `status`: `TEXT NOT NULL UNIQUE` - Official, admin-approved, unmoderated, pending-approval, community-favorite, flagged-for-review, sponsored, etc.
+                - `description`: `TEXT`
+
         - `is_private`: `BOOLEAN` - Whether the content is visible to other users.
         - `originator`: `INT REFERENCE user_profiles(id)` - Who made this. Content status determines editing privileges.
         - `popularity`: `INT` - Number of times this content has been accessed.
@@ -126,7 +149,21 @@ class Content(Base):
     originator = Column(Integer, ForeignKey("UserCredentials.id"))
     popularity = Column(Integer)
 
-class Words(Base):
+
+class Word(Base):
+    __tablename__ = 'words'
+    id = Column(BigInteger, ForeignKey('content.id'), primary_key=True)
+    word = Column(Text)
+    type = Column(Enum('word', 'affix', 'syllable', 'lexeme', 'stem', 'morpheme', name="wordtype_enum"))
+    language_tag = Column(Integer, ForeignKey('languages.id'))
+    part_of_speech = Column(Enum('noun', 'verb', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'interjection', 'article', name="speechpart_enum"))
+    grammar = Column(JSON)
+    sources_of_truth = Column(JSON)
+    context = Column(JSON)
+    content = relationship('Content')  # assuming Content is another SQLAlchemy model
+    language = relationship('Language')  # assuming Language is another SQLAlchemy model
+
+    
     """
     - **Words** - Atomic, mostly indivisible language units (morphemes) of the written and spoken variety. 
         - `id`: `BIGINT PRIMARY KEY REFERENCES content(id)` - Ref to content ID.
@@ -139,7 +176,7 @@ class Words(Base):
         - `context`: `JSONB` - Catchall for additional data. Anything in here might deserve its own field. 
     """
 
-class Signs(Base):
+class Sign(Base):
     """
     - **Signs** - Atomic, mostly indivisible language units of the visual variety.
         - `id`: `BIGSERIAL PRIMARY KEY REFERENCES content(id)`
@@ -148,7 +185,7 @@ class Signs(Base):
         - `context`: `JSONB` - Flexible additional information about the sign, such as the cultural context, location where it's used, etc.
     """
 
-class Phrases(Base):
+class Phrase(Base):
     """
     - **Phrases**  - A phrase is any non-atomic sequence with its own context, which therefore needs its own relationships. It can be self-evident or constructed by a component list of words/signs.
         - `id`: `BIGINT PRIMARY KEY REFERENCES content(id)` - Unique identifier for each content sequence.
@@ -159,7 +196,7 @@ class Phrases(Base):
         - `composite`: `BOOLEAN` -- Whether the phrase entered the database AS IS, or was constructed from the members of its component array.
     """
 
-class Relationships(Base):
+class Relationship(Base):
     """
     - **Content relationships**
         - `id`: `BIGSERIAL PRIMARY KEY`
@@ -174,7 +211,7 @@ class Relationships(Base):
         - `popularity`: `INT` - The number of times this content is studied or referenced.
     """
 
-class Lists(Base):
+class List(Base):
     __tablename__ = "lists"
     """
     - **Lists**
@@ -186,7 +223,7 @@ class Lists(Base):
     name = Column(JSON)
     description = Column(JSON)
 
-class ListItems(Base):
+class ListItem(Base):
     __tablename__ = "listitems"
     """
     - **List items**
@@ -199,7 +236,7 @@ class ListItems(Base):
     content_id = Column(Integer, ForeignKey("content.id"), primary_key=True)
     priority = Column(Integer)
 
-class StudyHistory(Base):
+class StudyEvent(Base):
     """
     - **Study history**
         - `study_id`: `BIGSERIAL PRIMARY KEY` - Unique identifier for each instance of studied content.
@@ -246,7 +283,7 @@ class UserPreferences(Base):
         - `timezone`: `TEXT` - Timezone strings.
     """
 
-class UserProfiles(Base):
+class User(Base):
     """
     - **User Profiles**
         - `id`: `SERIAL PRIMARY KEY` - Unique identifier for each user.
@@ -258,7 +295,7 @@ class UserProfiles(Base):
         - `account_status`: `ENUM('active','disabled','suspended','deleted')` - Whether the account is functional or not.
     """
 
-class UserRoles(Base):
+class UserRole(Base):
     """
     - **User roles** - For assigning privileges based on user status.
         - `id`: `SERIAL PRIMARY KEY`
@@ -269,8 +306,9 @@ class UserRoles(Base):
 
 # Lakes and Dumps
 
-class AnalyticsRaw(Base):
-    __tablename__ = ""
+class AnalyticsLake(Base):
+    __tablename__ = "analytics_lake"
+
     '''
     - **language-level analytics**
         - `id`: `SERIAL PRIMARY KEY`
